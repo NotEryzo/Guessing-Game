@@ -9,7 +9,7 @@ class GuessingGame:
         self.number = random.randint(1, difficulty)
 
     def playgame(self):
-        print("Welcome to Guess the Number!")
+        print("\nWelcome to Guess the Number!")
         print(f"I am thinking of a number between 1 and {difficulty}. You have {self.attempts} attempts to guess.")
 
         # Gets the user's number and checks if the number is correct.
@@ -28,7 +28,7 @@ class GuessingGame:
 
             attempts += 1
 
-        print("Game over! You ran out of attempts.")
+        print("\nGame over! You ran out of attempts.")
         print(f"I was thinking of the number: {self.number}")
 
     def getplayerguess(self):
@@ -52,7 +52,7 @@ class GuessingGame:
             return "low"
 
 # Difficulty menu where user is able to choose the difficulty
-def select_difficulty():
+def selectdifficulty():
     print("Select the difficulty level:")
     print("1. Easy (1-50)")
     print("2. Medium (1-100)")
@@ -67,10 +67,10 @@ def select_difficulty():
         return 500
     else:
         print("Invalid choice. Please try again.")
-        return select_difficulty()
+        return selectdifficulty()
 
 # Get the chosen difficulty level from the player
-difficulty = select_difficulty()
+difficulty = selectdifficulty()
 
 # Set the number of attempts based on the chosen difficulty
 if difficulty == 50:
